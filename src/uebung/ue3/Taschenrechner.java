@@ -1,7 +1,8 @@
 package uebung.ue3;
 
 public class Taschenrechner {
-
+	private double result = 0;
+	
 	public static void main(String[] args) {
 		Taschenrechner t = new Taschenrechner();
 		t.add(5);
@@ -18,5 +19,29 @@ public class Taschenrechner {
 	}
 
 	//Fehlende Methoden ergänzen:
+	private void add(double zahl) {
+		result = result + zahl;
+	}
+	
+	private void reset(){
+		result=0;
+	}
+	
+	private void substract(double zahl){
+		result = result-zahl;
+	}
+	private void sqrt() {
+		result= Math.sqrt(result);
+	}
+	private void fakultaet() {
+		double temp =1;
+		for(int i=1;i<=result;i++) {
+			temp = temp * i;
+		}
+		result = temp;		
+	}
+	public double getResult() {
+		return result;
+	}
 
 }

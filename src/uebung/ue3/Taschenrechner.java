@@ -17,6 +17,7 @@ public class Taschenrechner {
 		System.out.println("Ergebnis: " + t.getResult());
 	}
 
-	//Fehlende Methoden ergänzen:
-
+	//Fehlende Methoden ergänzenn:
+	xdfs
+	}
 }

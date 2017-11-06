@@ -1,9 +1,9 @@
 package uebung.ue3;
 
-public class TaschenrechnerOL {
+public class Taschenrechner {
 
 	public static void main(String[] args) {
-		TaschenrechnerOL t = new TaschenrechnerOL();
+		Taschenrechner t = new Taschenrechner();
 		t.add(5);
 		System.out.println("Ergebnis: " + t.getResult());
 		t.reset();

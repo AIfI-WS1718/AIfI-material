@@ -9,7 +9,7 @@ public class Binomial {
 		double zaehler = 1;
 		for(int i = 1;i<=k;i++) {
 			zaehler = zaehler * i;
-		}// achso
+		}// achso!
 		return zaehler;
 	}
 	

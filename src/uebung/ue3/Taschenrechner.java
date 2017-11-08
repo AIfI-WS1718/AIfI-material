@@ -14,13 +14,6 @@ public class Taschenrechner {
 		t.fakultaet();
 		System.out.println("Ergebnis: " + t.getResult());
 		t.sqrt();
-		1131
-		
-		3445464
-		
-		755
-		
-		
 		System.out.println("Ergebnis: " + t.getResult());
 	}
 

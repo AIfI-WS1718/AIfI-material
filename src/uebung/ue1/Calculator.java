@@ -11,6 +11,8 @@ public class Calculator {
 		
 		System.out.println(a + " + " + b + " = " + sum);
 		System.out.println(a + " - " + b + " = " + diff);
+		
+		//Nur zum test geändert
 	}
 
 }

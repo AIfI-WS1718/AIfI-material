@@ -4,7 +4,17 @@ public class SquareRoot {
 
 	public static void main(String[] args) {
 		// TODO bearbeite hier die Aufgabe aus dem freiwilligen Aufgabenblatt 1 und commite deine Loesung in deinem Branch. Viel Spaß :)
+		final double a = 25; // statisch machen
+		double lastx = a / 2;
+		double newx = 0;
+		double diff = a;
 		
+		while(diff > 0.0001){
+			newx = (lastx + (a / lastx)) * 0.5;
+			System.out.println(newx);
+			diff = Math.abs(newx - lastx);
+			lastx = newx;
+		}
 	}
 
 }

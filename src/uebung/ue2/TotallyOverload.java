@@ -7,7 +7,9 @@ class TotallyOverload {
 	}
 	
 	static int add(int a) {
+		System.out.println(a);
 		return ++a;
+	
 	}
 	
 	static double add(double a, double b) {

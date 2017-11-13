@@ -1,7 +1,9 @@
 package uebung.ue3;
 
-public class Taschenrechner {
+import java.util.Scanner;
 
+public class Taschenrechner {
+	
 	public static void main(String[] args) {
 		Taschenrechner t = new Taschenrechner();
 		t.add(5);
@@ -16,7 +18,30 @@ public class Taschenrechner {
 		t.sqrt();
 		System.out.println("Ergebnis: " + t.getResult());
 	}
-
-	//Fehlende Methoden ergänzen:
-
+		
+	double result = 0;
+	
+	public void reset() {
+		this.result = 0;
+	}
+	public double getResult(){
+		return this.result;
+	}
+	public void add(double l){
+		this.result += l;
+	}
+	public void substract(double l){
+		this.result -= l;
+	}
+	public void fakultaet(){
+		double j = this.result;
+		this.result = 1;
+		for(long i=1; i<= j; i++){
+			this.result *= i;
+		}
+	}
+	public void sqrt(){
+		result = Math.sqrt(result);
+		
+	}
 }

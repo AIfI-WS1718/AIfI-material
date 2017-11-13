@@ -1,4 +1,4 @@
-package UE4;
+package ue4;
 
 public class Cow{
 	private static int cowcount = 0;

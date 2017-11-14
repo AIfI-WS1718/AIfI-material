@@ -9,11 +9,10 @@ public class Cow {
 	public Cow (String name) {
 		this.name = name; 
 		this.cowCounter ++; 
-		this.hungry =! this.hungry; 
 	}
 	
 	public boolean getHungry() {
-		return hungry; 
+		return this.hungry; 
 	}
 	
 	public static int getCowCounter() {
@@ -30,5 +29,13 @@ public class Cow {
 	
 	protected void setName(String name) {
 		this.name = name; 
+	}
+	
+	public boolean isHungry() {
+		return this.hungry; 
+	}
+	
+	public void toddleHungry() {
+		this.hungry =! this.hungry; 
 	}
 }

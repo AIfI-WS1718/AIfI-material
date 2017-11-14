@@ -1,8 +1,8 @@
 
 public class Farmer {
 	
-	public static feedCow() {
-		Cow.getHungry(false);
+	public void feedCow(Cow cow) {
+		cow.toddleHungry(); 
 	}
 	
 }

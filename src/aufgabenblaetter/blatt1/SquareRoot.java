@@ -30,6 +30,9 @@ public class SquareRoot {
             try {
                 Scanner inputStream = new Scanner(System.in);
                 input = inputStream.next();
+                /* tt, 14.11.: du hast vergessen, die Eingabe zu beenden. Eclipse sollte dazu normaler Weise auch ein Warning anzeigen:
+                 * inputStream.close();
+                 */
                 Console.log("Provided value: " + input);
                 if(Float.parseFloat(input)>0){
                     break;

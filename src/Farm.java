@@ -1,0 +1,15 @@
+
+public class Farm {
+
+	public static void main(String [] args) {
+		
+		
+		Cow cow1 = new Cow ("a");
+		Cow cow2 = new Cow ("b");
+		Cow cow3 = new Cow ("c");
+		
+		System.out.println("Kuh1: "+ cow1.getName() + "  Kuh2: "+ cow2.getName()+ "  Kuh3: " +  cow3.getName());
+		System.out.println("Anzahl der Kühe: " + Cow.getCowCounter());
+		System.out.println("Hunger: " + Cow.getHungry());
+	}
+}

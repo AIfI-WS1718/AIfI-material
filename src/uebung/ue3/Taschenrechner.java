@@ -18,5 +18,34 @@ public class Taschenrechner {
 	}
 
 	//Fehlende Methoden ergänzen:
-
+	
+	double result = 0.0; 
+	
+	public void reset() {
+		this.result = 0; 
+	}
+	
+	public double getResult() {
+		return this.result; 
+	}
+	
+	public void add(double a) {
+		this.result += a; 
+	}
+	
+	public void subtract(double b) {
+		this.result -= b; 
+	}
+	
+	public void sqrt(double c) {
+		this.result = Math.sqrt(c); 
+	}
+	
+	public void fakultaet() {
+		double j = this.result; 
+		this.result = 1; 
+		for(long i = 1; i <= j; i++) {
+			this.result *= i; 
+		}
+	}
 }

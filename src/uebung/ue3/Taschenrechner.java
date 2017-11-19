@@ -20,16 +20,16 @@ public class Taschenrechner {
 	double result=0;
 	
 	public void reset() {
-		result=0;
+		this.result=0;
 	}
 	public void add(double l) {
-		result += l;
+		this.result += l;
 	}
 	public double getResult() {
-		return result;
+		return this.result;
 	}
 	public void substract(double l) {
-		result -= l;
+		this.result -= l;
 	}
 	public void fakultaet() {
 		double j = result;
@@ -41,7 +41,5 @@ public class Taschenrechner {
 	public void sqrt() {
 		result=Math.sqrt(result);
 	}
-	
-	
-
 }
+

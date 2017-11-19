@@ -17,6 +17,31 @@ public class Taschenrechner {
 		System.out.println("Ergebnis: " + t.getResult());
 	}
 
-	//Fehlende Methoden ergänzen:
+	double result=0;
+	
+	public void reset() {
+		result=0;
+	}
+	public void add(double l) {
+		result += l;
+	}
+	public double getResult() {
+		return result;
+	}
+	public void substract(double l) {
+		result -= l;
+	}
+	public void fakultaet() {
+		double j = result;
+		result=1;
+		for (long i=1; i <= j; i++) {
+		result *=i;
+	 }
+	}
+	public void sqrt() {
+		result=Math.sqrt(result);
+	}
+	
+	
 
 }

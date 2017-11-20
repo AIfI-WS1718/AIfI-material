@@ -16,7 +16,7 @@ public class Farm {
 		Calf marie = heidi.giveBirth("Marie", "Heidi");
 		System.out.println("Namen: " + berta.getName() + ", " + helga.getName() + " und " + heidi.getName() + ".");
 		System.out.println( Cow.cowcounter +  " Kühe vorhanden.");
-		System.out.println("Kind von Heidi: "+  marie.getName());
+		System.out.println(marie.getName());
 	}
 
 }

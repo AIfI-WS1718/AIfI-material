@@ -19,9 +19,6 @@ public class Cow {
 		return cowCounter; 
 	}
 	
-	/*public static void setCowCounter(int cowCounter) {
-		this.cowCounter ++; 
-	}*/
 	
 	public String getName() {
 		return name; 

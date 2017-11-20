@@ -35,4 +35,8 @@ public class Cow {
 	public void toddleHungry() {
 		this.hungry =! this.hungry; 
 	}
+	
+	public Calf giveBirth(String name) {
+		return baby = new Calf; 
+	}
 }

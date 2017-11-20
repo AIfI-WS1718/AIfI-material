@@ -12,12 +12,16 @@ public class TaschenrechnerLsg {
 		return this.result;
 	}
 
-	private void add(double a) {
-		this.result += a;
+	private void add(double summand) {
+		this.result += summand;
 	}
 
-	private void substract(double a) {
-		this.result -= a;
+	private void substract(double subtrahend) {
+		this.result -= subtrahend;
+	}
+	
+	private void sqrt(){
+		this.result = Math.sqrt(this.result);
 	}
 
 	public static void main(String[] args) {

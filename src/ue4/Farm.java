@@ -5,6 +5,9 @@ public class Farm {
 		Cow berta = new Cow("Berta");
 		Cow anton = new Cow("Anton");
 		Cow jojo = new Cow("Jojo!");
-		System.out.println(berta.getName() + anton.getName() + jojo.getName() + Cow.getCowCount());
+		System.out.println(berta.getName() + "s Hunger:" + berta.getHungry());
+		Farmer.feedCow(berta);
+		System.out.println(berta.getName() + "s Hunger:" + berta.getHungry());
+		
 	}
 }

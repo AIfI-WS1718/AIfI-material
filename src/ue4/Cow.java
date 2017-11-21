@@ -3,7 +3,7 @@ package ue4;
 public class Cow{
 	private static int cowcount = 0;
 	private String name;
-	private int hungry = 0;
+	private int hungry = 1;
 	
 	Cow(String kuhname){
 		setName(kuhname);

@@ -8,6 +8,7 @@ public class Farm {
 		System.out.println(berta.getName() + "s Hunger:" + berta.getHungry());
 		Farmer.feedCow(berta);
 		System.out.println(berta.getName() + "s Hunger:" + berta.getHungry());
-		
+		Cow kind = jojo.giveBirth("Boii");
+		System.out.println(kind.getName());
 	}
 }

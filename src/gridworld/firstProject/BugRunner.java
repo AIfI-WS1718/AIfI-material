@@ -33,6 +33,7 @@ public class BugRunner
     {
         ActorWorld world = new ActorWorld();
         world.add(new Bug());
+        world.add(new DisposableBug());
         world.add(new Rock());
         world.show();
     }

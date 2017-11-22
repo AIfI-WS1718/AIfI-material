@@ -29,6 +29,12 @@ public class Cow{
 			this.hungry = 1;
 		}
 	}
+	public Cow giveBirth(String calfname) {
+		return new Calf(calfname, this);
+	}
 
 }
+
+	
+
 

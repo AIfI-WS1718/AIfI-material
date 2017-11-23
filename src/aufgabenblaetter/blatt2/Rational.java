@@ -26,10 +26,10 @@ class Rational {
 	
 	public static void main(String[] args) {
 		Rational foo = new Rational();
-		foo.setZaehler(4);
-		foo.setNenner(5);
+		foo.setZaehler(1);
+		foo.setNenner(3);
 		foo.printRational();
-		foo.negate();
+		foo.add(new Rational(1,2));
 		foo.printRational();
 	}
 	public void invert() {
@@ -44,14 +44,18 @@ class Rational {
 		return(zaehler/nenner);
 	}
 	public Rational reduce() {
-		Rational reducedRational = new Rational();
-		return(reducedRational);
+		Rational reducedRational = new Rational(0,1);
 		//TODO
+		return(reducedRational);
 	}
-	public add(Rational bob) {
-		Rational resultRational = new Rational();
-		resultRational.setZaehler
 		
+	public void add(Rational bob) {
+		Rational resultRational = new Rational();
+		resultRational.zaehler = this.zaehler * bob.nenner;
+		resultRational.nenner = this.nenner * bob.nenner;
+		resultRational.zaehler += bob.zaehler * this.nenner;
+		this.setNenner(resultRational.nenner);
+		this.setZaehler(resultRational.zaehler);
 	}
 	
 }

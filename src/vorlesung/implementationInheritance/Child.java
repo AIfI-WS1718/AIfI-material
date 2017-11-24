@@ -14,7 +14,7 @@ public class Child extends Person {
 	
 	int getAgeInMonth() {
 		// Achtung: Auch super.age geht nicht, weil age hier nicht sichtbar ist (private)
-		return 12 * getAge();
+		return 12 * super.getAge();
 	}
 	
 }

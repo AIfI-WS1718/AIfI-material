@@ -18,6 +18,14 @@ public class Cow {
 		return cowCounter;
 	}
 	
+	public Calf giveBirth(String name){
+		Calf newCalb = new Calf(name, this);
+		
+		return newCalb;
+		
+		
+	}
+	
 }
 	
 

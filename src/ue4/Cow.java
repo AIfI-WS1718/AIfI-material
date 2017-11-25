@@ -1,7 +1,7 @@
 package ue4;
 
 public class Cow {
-	private String name;
+	protected String name;
 	private static int cowCounter = 0;
 	boolean hungry = true;
 	
@@ -25,4 +25,9 @@ public class Cow {
 			hungry = false;
 		}
 	}
+	
+	public Calf giveBirth(String name) {
+		return new Calf(name, this);
+	}
+
 }

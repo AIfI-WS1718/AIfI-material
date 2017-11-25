@@ -33,6 +33,11 @@ public class Farm {
 		System.out.println(cow2.hungry);
 		System.out.println(cow3.hungry);
 		
+		Calf calf1 = cow1.giveBirth("Horst");
+		
+		System.out.println(calf1.name + " stammt von " + cow1.name + " ab.");
+		
+		System.out.println(calf1.getName());
 		
 	}
 }

@@ -8,7 +8,7 @@ public class GridworldMein {
 		
 	
 	ActorWorld worldNew = new ActorWorld();
-	worldNew.add(new DisposableBug());
+	worldNew.add(new Breeder());
 	worldNew.add(new Rock());
 	worldNew.show();
 	

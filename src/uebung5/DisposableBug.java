@@ -10,29 +10,20 @@ public class DisposableBug extends gridworld.framework.actor.Bug {
 		super(Color.BLUE);
 	}
 
+	@Override
 	public void act() {
-
-		if (Math.random() < 0.6 && canMove())
-			move();
-
-		else
+		if (Math.random() <= 0.4) {
 			turn();
-		zyklusZaehler++;
-
-		if (zyklusZaehler >= 25)
-
-		{
-
-			deadBug();
-
 		}
-	}
-
-	public void deadBug() {
-
-		if (Math.random() > 0.2) {
+		if (zyklusZaehler >= 25 && Math.random() >= 0.2) {
 			removeSelfFromGrid();
-
 		}
+
+		else {
+			super.act();
+			zyklusZaehler++;
+		}
+
 	}
+
 }

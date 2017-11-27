@@ -17,4 +17,9 @@ public class Child extends Person {
 		return 12 * getAge();
 	}
 	
+	@Override
+	public String toString() {
+		 return super.toString() + ", school " + school;
+	}
+	
 }

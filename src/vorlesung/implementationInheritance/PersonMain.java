@@ -22,6 +22,14 @@ public class PersonMain {
 		driver.walk();
 		driver.changeEmployerInAdult("Clever Shuttle");
 		System.out.println("driver arbeitet bei " + driver.employer);
+		
+		System.out.println("........");
+		
+		Person myPerson = new Child();
+		if(myPerson instanceof Adult) {
+			((Adult) myPerson).getEmployer();
+		}
+		System.out.println(myPerson.toString());
 	}
 
 }

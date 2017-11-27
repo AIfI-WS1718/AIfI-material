@@ -15,7 +15,7 @@ class CallByReference {
 		System.out.println("Eigene Objekte sind Call-By-Reference:");
 		ComplexNumber cn1 = new ComplexNumber(3, 4);
 		ComplexNumber cn2 = new ComplexNumber(4, 66);
-		System.out.println("cn1: (" + cn1.real + "," + cn2.imag + "), cn2: (" + cn2.real + "," + cn2.imag + ")");
+		System.out.println("cn1: (" + cn1.real + "," + cn1.imag + "), cn2: (" + cn2.real + "," + cn2.imag + ")");
 		add (cn1, cn2);
 		System.out.println("cn1 nach add(...): (" + cn1.real + "," + cn1.imag + ")");
 		

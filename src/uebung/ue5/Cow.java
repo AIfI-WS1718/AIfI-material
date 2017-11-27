@@ -1,4 +1,4 @@
-package uebung.ue4;
+package uebung.ue5;
 
 public class Cow {
 
@@ -25,5 +25,9 @@ public class Cow {
 	
 	public void toggleHungry() {
 		this.hungry =!this.hungry;
+	}
+	
+	public Calf giveBirth(String name) {
+		return new Calf(name, this);
 	}
 }

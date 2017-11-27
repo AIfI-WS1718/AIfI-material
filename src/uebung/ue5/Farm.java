@@ -1,4 +1,4 @@
-package uebung.ue4;
+package uebung.ue5;
 
 public class Farm {
 	
@@ -17,5 +17,8 @@ public class Farm {
 		Farmer farmer = new Farmer();
 		farmer.feedCow(cow1);
 		System.out.println(cow1.getName() + " Hunter:" + cow1.isHungry() );
+		
+		Calf calf = cow1.giveBirth("Johnny");
+		System.out.println(calf.getName());
 	}
 }

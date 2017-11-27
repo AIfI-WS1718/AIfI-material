@@ -12,6 +12,7 @@ public class TaschenrechnerLsg {
 		return this.result;
 	}
 
+
 	private void add(double l) {
 		this.result += l;
 	}
@@ -29,6 +30,7 @@ public class TaschenrechnerLsg {
 		for (long i=1; i <= value; i++) {
 			this.result *= i;
 		}
+
 
 	}
 

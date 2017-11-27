@@ -1,5 +1,9 @@
 package aufgabenblaetter.blatt2;
 
+/*
+ * Feedback gl 27.11.
+ * Gut, ganz analog zur Klasse Rational. Eigentlich sollte jeweils ein neues ImmutableRational Objekt zurückgegeben werden, anstatt nur auf die Kommandozeile auszugeben.
+ */
 class ImmutableRational {
 
 	public static void main(String[] args) {
@@ -17,6 +21,7 @@ class ImmutableRational {
 		
 	}
 
+	// gl 27.11. int reicht vollkommen aus. private wäre schön
 	Integer zaehler;
 	Integer nenner;
 	

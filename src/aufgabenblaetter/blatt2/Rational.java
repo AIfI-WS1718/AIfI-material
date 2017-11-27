@@ -1,5 +1,10 @@
 package aufgabenblaetter.blatt2;
 
+/*
+ * Feedback gl 27.11.
+ * Gut! Sauberer Stil und funktional so weit die Aufgaben bearbeitet wurden.
+ * Leider nur Aufgabe 1.1.1 bis 1.1.8 bearbeitet.
+ */
 class Rational {
 	
 	public double zaehler, nenner;
@@ -26,14 +31,14 @@ class Rational {
 	}
 	
 	public static void negate(Rational a) {
-		a.setZaehler((-1)*a.zaehler);
+		a.setZaehler((-1)*a.zaehler); // gl 27.11.: Es geht sogar noch kürzer: a.zaehler = -a.zaehler; Den Setter benutzt man eher von außerhalb dieser Klasse.
 	}
 	
 	public static void invert(Rational a) {
 		double b,c;
 		b = a.nenner;
 		c = a.zaehler;
-		a.setZaehler(b);
+		a.setZaehler(b); // gl 27.11. Die Setter benutzt man meißt nur, wenn man von anderen Klassen ausgehend auf Variablen dieser Klasse zugreifen möchte.
 		a.setNenner(c);
 	}
 	

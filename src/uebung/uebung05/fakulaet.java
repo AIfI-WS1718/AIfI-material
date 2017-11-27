@@ -2,11 +2,16 @@ package uebung.uebung05;
 
 public class fakulaet {
 	public static void main(String[] args) {
-		int z =5;
-		int f =1;
-		for (int i = 0; i<z; i++) {
-			f = f*(z-i);
+		System.out.println(fak(5));
+	}
+
+
+	public static long fak(long zahl) {
+		if (zahl==0) {
+			return 1;
 		}
-		System.out.println(f);
+		else {
+			return fak(zahl-1)*zahl;
+		}
 	}
 }

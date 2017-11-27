@@ -55,7 +55,7 @@ class Rational {
 		resultRational.nenner = this.nenner * bob.nenner;
 		resultRational.zaehler += bob.zaehler * this.nenner;
 		this.setNenner(resultRational.nenner);
-		this.setZaehler(resultRational.zaehler);
+		this.setZaehler(resultRational.zaehler); //wtf
 	}
 	
 }

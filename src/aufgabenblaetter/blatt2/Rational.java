@@ -1,7 +1,13 @@
 package aufgabenblaetter.blatt2;
 
+/*
+ * Feedback gl 28.11.
+ * Ganz gut. Weitgehend sauberer Stil und funktional, allerdings verwenden die Methoden nicht 
+ * die Rational-Objekte, um die es eigentlich ging :-/
+ */
 public class Rational {
 
+	// gl 28.11. Üblicherweise sind Zähler und Nenner ganzzahlig, also reicht hier auch ein ganzzahliger Datentyp
 	private  double zähler;
 	private  double nenner;
 	
@@ -95,19 +101,30 @@ public class Rational {
 		return zähler;
 	}
 	
+	/* gl 28.11. Eigentlich sollte die negate Methode an einem Objekt aufgerufen werden und dieses 
+	 * verändern. Dann braucht man auch keine Übergabeparameter und das Objekt merkt sich die 
+	 * Änderungen, sodass man diese nicht direkt mit System.out.println auf der Konsole ausgeben muss.
+	 * Das ist dann auch viel weniger Tipparbeit.
+	 */
 	private void negate (double zähler, double nenner) {
 	
 		System.out.println("Funktion Negate von Zähler: " + zähler);
 		System.out.println("Funktion Negate von Nenner: " + nenner);
 		
+		// gl 28.11. Kehrt man das Vorzeichen des Zählers und das Vorzeichen des Nenners um, dann ist das Vorzeichen des gesamten Bruchs nicht nicht gleichgeblieben ;-)
 		zähler = -zähler;
 		nenner = -nenner;
 		
 		System.out.println("Zähler: " + zähler);
 		System.out.println("Nenner: " + nenner);
+		
+		// gl 28.11. Das return hier stört nicht, ohne es funktioniert das Programm allerdings genau gleich.
 		return;
 	}
 	
+	/* gl 28.11. Eigentlich sollte die invert Methode an einem Objekt aufgerufen werden und dieses 
+	 * verändern. Wie bei der negate Methode.
+	 */ 
 	public void invert (double zähler, double nenner) {
 		
 		double tausch;
@@ -121,6 +138,10 @@ public class Rational {
 		return;
 	}
 	
+	/* gl 28.11. Analog zur negate Methode
+	 * In Java schreibt man Methodennamen üblicherweise in camelCase. Gönne deiner toDouble Methode doch auch einen Höcker ;-)
+	 * Die beiden nächsten Methoden sind leider zu weit eingerückt. Das kann man einfach mit Strg+i korrigieren lassen.
+	 */
 		public double todouble (double zähler, double nenner) {
 			double bruch;
 			bruch = zähler/nenner;
@@ -128,11 +149,13 @@ public class Rational {
 			return bruch;
 		}
 		
+		// gl 28.11. Analog zur negate Methode. Eigentlich sollte man den gekürzten Bruch als ein rational-Objekt zurückgeben.
 		public void reduce (double zähler, double nenner) {
 			
 			double z=zähler;
 		    double n=nenner;
 		   // double bruch = (zähler/z)/(nenner/n);
+		    // gl 28.11. Sehr schön mit ggT implementiert.
 		    while (z!=n) {
 		            if (z<n) n = n-z;
 		            else z = z-n;
@@ -142,8 +165,13 @@ public class Rational {
 		   // return bruch;
 		  }
 		
+		// gl 28.11. Analog zur negate Methode.
 		public void add (double zähler, double nenner) {
-
+			/* gl 28.11. Schön, dass du an das Konzept der Getter gedacht hast. Allerdings verwendet 
+			 * man die meist nicht innerhalb der Klasse in der man sie definiert hat, denn dort 
+			 * sind sowieso alle in dieser Klasse definierten Variablen sichtbar. Anstattdessen legt
+			 * man Getter an, um die Zugriffsmöglichkeiten aus anderen Klassen heraus zu regeln.
+			 */
 			zähler = zähler + getZähler();
 			System.out.println("addierter Zähler: " + zähler);
 			nenner = nenner + getNenner();

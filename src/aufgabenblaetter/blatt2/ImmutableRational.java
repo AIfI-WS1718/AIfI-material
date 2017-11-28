@@ -5,6 +5,9 @@ public class ImmutableRational {
 	public double zähler;
 	public double nenner;
 	
+	/* gl 28.11. Eigentlich bräcuhte man die anderen Methoden von Rational auch, damit wirklich 
+	 * die gleiche Funktionalität bereitgestellt wird.
+	 */
 	public ImmutableRational () {
 		zähler = 4.0;
 		nenner = 2.0;

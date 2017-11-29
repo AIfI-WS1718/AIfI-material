@@ -1,6 +1,6 @@
 package vorlesung.implementationInheritance;
 
-public class Person {
+public class Person /* extends Object */ {
 
 	private int age = 3;
 	
@@ -22,6 +22,11 @@ public class Person {
 	int getAge() {
 		System.out.println("Calling Person getAge()...");
 		return age;
+	}
+	
+	@Override
+	public String toString() {
+		return "age " + age;
 	}
 	
 }

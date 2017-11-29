@@ -5,6 +5,10 @@ public class Driver extends Adult {
 	public Driver(int age, String employer) {
 		super(age, employer);
 	}
+	
+	public Driver(int age) {
+		this(age, "");
+	}
 
 	void drive() {
 		System.out.println("drive...");

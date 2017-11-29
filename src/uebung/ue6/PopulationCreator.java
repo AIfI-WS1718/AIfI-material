@@ -1,6 +1,6 @@
 package uebung.ue6;
 
-import generator.NameAndBirthYearGenerator;
+//import generator.NameAndBirthYearGenerator;
 
 public class PopulationCreator {
 	static long seed;
@@ -16,9 +16,9 @@ public class PopulationCreator {
 
 	
 	public static void populate() {
-		NameAndBirthYearGenerator pop = new NameAndBirthYearGenerator(seed);
+	//	NameAndBirthYearGenerator pop = new NameAndBirthYearGenerator(seed);
 		for (int i = 0; i < 1000; i++) {
-			einwohner[i] = pop.generateNameAndBirthYearString();
+		//	einwohner[i] = pop.generateNameAndBirthYearString();
 		}
 	}
 

@@ -182,6 +182,7 @@ public class Actor
     public void act()
     {
         setDirection(getDirection() + Location.HALF_CIRCLE);
+        System.out.println("y u do dis");
     }
 
     /**

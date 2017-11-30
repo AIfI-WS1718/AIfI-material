@@ -244,7 +244,7 @@ public class Location implements Comparable
             return 1;
         return 0;
     }
-
+ 
     /**
      * Creates a string that describes this location.
      * @return a string with the row and column of this location, in the format

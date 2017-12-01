@@ -19,7 +19,7 @@ public class Child extends Person {
 	
 	@Override
 	public String toString() {
-		 return super.toString() + ", school " + school;
+		return super.toString() + ", school " + school;
 	}
 	
 }

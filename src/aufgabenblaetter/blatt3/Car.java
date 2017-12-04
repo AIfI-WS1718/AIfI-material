@@ -20,6 +20,12 @@ public class Car extends Actor {
 			if (speed < 5) {
 				speed += 1;
 			}
+/*			gl 4.12. So kann die Geschwindigkeit auch negativ werden, was die vielen Staus auslöst
+ * 			und in der Simulation nicht richtig abgebildet wird (Autos bleiben stehen und fahren
+ * 			nicht wie in speed angegeben rückwärts
+ * 
+ * 			Mit einer kleinen Fallunterscheidung kann man das ganz einfach lösen.
+ */
 			if (Math.random() * 100 <=30) {
 				speed -= 1;
 			}
@@ -28,6 +34,9 @@ public class Car extends Actor {
 
 			for (int i = 1; i <= speed; i++) { // for-Schleife zur Hindernis-PrÃ¼fung
 
+/*				gl 4.12. Ein kleiner Verbesserungsvorschlag: Statt die Breite 50 Spalten fest 
+ * 				hineinzuschreiben, kann man sie auch mit getGrid().getNumCols() abfragen.
+ */
 				if (getLocation().getCol() + i >= 50) {
 					break;
 				}
@@ -58,6 +67,7 @@ public class Car extends Actor {
 		}
 	}
 
+//	gl 4.12. Sehr schoen :-)
 	public boolean canMove(Location next) {
 		if (getGrid().get(next) instanceof Rock) { // wenn daneben ein Stein ist --> melden
 			typ = "Stein";

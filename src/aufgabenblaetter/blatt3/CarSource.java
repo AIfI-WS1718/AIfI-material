@@ -12,6 +12,9 @@ public class CarSource extends Actor {
 		loc = new Location(posx, 1);
 	}
 
+/*	gl 4.12. Ein kleiner Verbesserungsvorschlag: Man könnte die Wahrscheinlichkeit konfigurierbar machen und
+ * sich dann z.B. verschiedene CarSources mit verschiedenen Auto-Hinzufüge-Wahrscheinlichkeiten gleichzeitig angucken.
+ */
 	@Override
 	public void act() {
 		if (!(getGrid().get(loc) instanceof Car || getGrid().get(loc) instanceof Rock) && Math.random() * 100 > 85) { // wenn

@@ -2,6 +2,7 @@ package vorlesung.interfaces.mitMehrfachvererbung;
 
 public interface EmployableI {
 
-	String getEmployer();
+	public void setEmployer(String str);
+	public String getEmployer();
 	
 }

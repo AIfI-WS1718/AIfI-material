@@ -1,6 +1,6 @@
 package vorlesung.implementationInheritance;
 
-public class Person {
+public class Person /* extends Object */ {
 
 	private int age = 3;
 	

@@ -12,10 +12,6 @@ public class Driver extends Adult {
 		this(age, "");
 	}
 	
-	public Driver(int age) {
-		this(age, "");
-	}
-
 	void drive() {
 		System.out.println("drive...");
 	}

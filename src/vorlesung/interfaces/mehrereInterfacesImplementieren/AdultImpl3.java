@@ -23,4 +23,9 @@ public class AdultImpl3 implements PersonI, EmployableI{
 		this.age = age;
 	}
 
+	@Override
+	public void setEmployer(String str) {
+		
+	}
+
 }

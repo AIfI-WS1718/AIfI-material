@@ -1,17 +1,29 @@
 package aufgabenblatt2;
 
 public class Rational {
-	private static Rational zero = new Rational(0,1);
 	
-	private int Zähler;
-	private int Nenner;
+	double Zähler;
+	double Nenner;
 	
-	Rational() {
-		Zähler = 0;
-		Nenner = 1;
+	public Rational() {
+		this.Zähler = 0;
+		this.Nenner = 1;
 	}
-
-	void printRational() {
-		System.out.println("Zähler " + "Nenner");
+	
+	public void printRational() {
+		System.out.println("Nenner = " + Zähler + " ,Nenner = " + Nenner);
+	}
+	
+	public void setZähler(double Zähler) {
+		this.Zähler = 0;
+	}
+	
+	public void setNenner(double Nenner) {
+		this.Nenner = 1;
+	}
+	
+	public static void main(String[] args) {
+		Rational rat = new Rational();
+		System.out.println("Zähler/Nenner = " + rat.Zähler/rat.Nenner );
 	}
 }

@@ -14,8 +14,7 @@ public class AdultMain {
 		AgentI ag = new AdultImpl();
 		ag.aMethod();
 		
-		AdultMain.aMethod(ag) = new ;
-		myObject.aMethod() = 
+		AdultMain myObject = new AdultMain();
+		myObject.aMethod(ag);
 	}
-
 }

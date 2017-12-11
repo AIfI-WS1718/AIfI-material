@@ -1,14 +1,16 @@
 package uebung.ue7;
 
 public class TransportSimulator {
-	Movable agenten[] = new Movable[3];
+	Movable agenten[] = new Movable[3];{
 	agenten[0] = new Ship("BoatyMcBoatface",1.2,2.6);
 	agenten[1] = new Helicopter("FlyerMcFlyface",4.1,6.0,8.9);
-	agenten[2] = new Elevator("ElevatyMcElevateface",90.2);
+	agenten[2] = (Movable) new Elevator("ElevatyMcElevateface",90.2);}
+	
 
 	
 	public TransportSimulator() {
 	}
+	
 	
 	public void increaseSpeedByRandom(Movable mov) {
 		if(mov instanceof CanMoveHorizontally){

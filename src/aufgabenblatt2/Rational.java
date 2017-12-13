@@ -10,16 +10,16 @@ public class Rational {
 		this.Nenner = 1;
 	}
 	
-	public void printRational() {
-		System.out.println("Nenner = " + Zähler + " ,Nenner = " + Nenner);
+	public double printRational() {
+		return Zähler + Nenner;
 	}
 	
 	public void setZähler(double Zähler) {
-		this.Zähler = 0;
+		this.Zähler = Zähler;
 	}
 	
 	public void setNenner(double Nenner) {
-		this.Nenner = 1;
+		this.Nenner = Nenner;
 	}
 	
 	public static void main(String[] args) {

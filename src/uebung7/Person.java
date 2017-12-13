@@ -42,7 +42,6 @@ public class Person {
 		
 		arrayList.remove(2);
 
-		
 		for (Person p : arrayList) {
 			System.out.println(p.toString());
 		}

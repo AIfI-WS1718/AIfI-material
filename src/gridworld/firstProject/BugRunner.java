@@ -32,8 +32,8 @@ public class BugRunner
     public static void main(String[] args)
     {
         ActorWorld world = new ActorWorld();
-        world.add(new Bug());
-        world.add(new Rock());
-        world.show();
+        world.add(new Bug()); //Käfer hinzufügen
+        world.add(new Rock()); //Stein hinzufügen
+        world.show(); //Sichtbar machen
     }
 }

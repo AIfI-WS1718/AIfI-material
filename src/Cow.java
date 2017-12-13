@@ -19,7 +19,6 @@ public class Cow {
 		return cowCounter; 
 	}
 	
-	
 	public String getName() {
 		return name; 
 	}
@@ -37,6 +36,6 @@ public class Cow {
 	}
 	
 	public Calf giveBirth(String name) {
-		return baby = new Calf; 
+		return new Calf(name, this); 
 	}
 }

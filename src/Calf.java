@@ -1,19 +1,16 @@
 
 public class Calf extends Cow {
 
-	private String mother; 
+	private Cow mother; 
 
-	Calf (String name, String mother){
+	Calf (String name, Cow mother){
 		super(name);
-		this.mother = super.getName();
-	}
-
-	public String getMother() {
-		return mother; 
+		this.mother = mother;
 	}
 	
-	public void setMother(String mother) {
-		this.mother = mother; 
+	@Override
+	public String getName() {
+		return super.getName() + "Mutter: " + mother.getName();
 	}
 	
 	

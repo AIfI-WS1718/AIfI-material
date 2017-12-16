@@ -23,6 +23,19 @@ public class PersonTest {
 	persons.remove(2);
 	System.out.println(persons);
 	
+	Person personSvetka = new Person("Svetka", 13);
+	persons.add(0,personSvetka);
+     System.out.println(persons);
 	
+	persons.add(3, new Person ("Katka", 87));
+	System.out.println(persons);
+	System.out.println(persons.size()); 
+//	persons.clear();
+	System.out.println(persons.isEmpty()); 
+	
+	System.out.println(persons.contains(personSvetka));
+	persons.remove(personSvetka);
+	System.out.println(persons);
+	persons.remove(person);
 	}
 }

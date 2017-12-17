@@ -10,7 +10,7 @@ public class Galaxy {
 		System.out.println(ele1.toString());
 		ele1.groesse = 40.0;
 		ele1.x = 37;
-		ele1.y = (int) 'ß';
+		ele1.y = 522;
 		ele1.name = "Nicht Teil der Galaxy";
 		System.out.println(ele1.toString());
 

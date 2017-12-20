@@ -3,15 +3,14 @@ package uebung.ue4;
 public class Cow {
 	private String name;
 	private boolean hungry = false;
-	static int cowcounter = 0;
-	Cow(String tmp, int count) {
-		name = tmp;
-		count++;
+	private static int cowcounter = 0;
+	Cow(String name) {
+		this.name = name;
 		cowcounter++;
 		
 	}
 	
-	public void toggle () {
+	public void toggle() {
 		if (!hungry) {
 			hungry=true;
 		}
@@ -22,11 +21,11 @@ public class Cow {
 	public String getName() {
 		return name;
 	}
-	public void setName(String tmp) {
-		name = tmp;
+	public void setName(String name) {
+		this.name = name;
 	}
 	
-	public static int getCows () {
+	public static int getCowCount() {
 		return cowcounter;
 	}
 }

@@ -10,11 +10,11 @@ public class Farm {
 //		Cow heidi = new Cow();
 //		heidi.name = "Heidi";
 		int cowcounter = 0;
-		Cow berta = new Cow("Berta", cowcounter);
-		Cow helga = new Cow("Helga", cowcounter);
-		Cow heidi = new Cow("Heidi", cowcounter);
+		Cow berta = new Cow("Berta");
+		Cow helga = new Cow("Helga");
+		Cow heidi = new Cow("Heidi");
 		System.out.println("Namen: " + berta.getName() + ", " + helga.getName() + " und " + heidi.getName() + ".");
-		System.out.println( Cow.cowcounter +  " Kühe vorhanden.");
+		System.out.println( Cow.getCowCount()+  " Kuehe vorhanden.");
 	}
 
 }

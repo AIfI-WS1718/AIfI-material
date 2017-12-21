@@ -1,7 +1,7 @@
 package uebung.ue4;
 
 public class Farmer {
-	void feedCow() {
-		
+	public void feedCow(Cow cow) {
+		cow.toggle();
 	}
 }

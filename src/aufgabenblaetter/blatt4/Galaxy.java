@@ -1,6 +1,7 @@
 package aufgabenblaetter.blatt4;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Galaxy {
 
@@ -32,34 +33,47 @@ public class Galaxy {
 			Planet pl = new Planet("Planet" + i, (Sun) galaxy.get(i - 25), (double) i * Math.random() * 100, i);
 			galaxy.add(pl);
 		}
-		
+
 		for (int i = 50; i < 62; i++) {
 			SpaceShip sp = new SpaceShip("SpaceShip" + i);
 			galaxy.add(sp);
 		}
-		
+
 		for (int i = 62; i < 75; i++) {
-			SpaceShip sp = new SpaceShip(i, i, "SpaceShip" + i, (double) i * Math.random() * 100, (int) (Math.random() * 100));
+			SpaceShip sp = new SpaceShip(i, i, "SpaceShip" + i, (double) i * Math.random() * 100,
+					(int) (Math.random() * 100));
 			galaxy.add(sp);
 		}
 
-		for (int i = 0; i < 75; i++) {
+		for (int i = 0; i < 5; i++) {
+			for (Iterator<GalaxyElement> it = galaxy.iterator(); it.hasNext();) {
+				GalaxyElement g = it.next();
+				if (g instanceof SpaceShip) {
+					((SpaceShip) g).hit(Math.random() * 25);
+					if (((SpaceShip) g).isDestroyed()) {
+						it.remove();
+					}
+				}
+			}
+		}
+
+		for (int i = 0; i < galaxy.size(); i++) {
 			System.out.println(galaxy.get(i).toString());
 			if (galaxy.get(i) instanceof Movable) {
 				Movable mov = (Movable) galaxy.get(i);
 				mov.move();
 			}
 		}
-		
-		for (int i = 0; i < 75; i++) {
+
+		for (int i = 0; i < galaxy.size(); i++) {
 			System.out.println(galaxy.get(i).toString());
 			if (galaxy.get(i) instanceof Movable) {
 				Movable mov = (Movable) galaxy.get(i);
 				mov.move();
 			}
 		}
-		
-		for (int i = 0; i < 75; i++) {
+
+		for (int i = 0; i < galaxy.size(); i++) {
 			System.out.println(galaxy.get(i).toString());
 			if (galaxy.get(i) instanceof Movable) {
 				Movable mov = (Movable) galaxy.get(i);

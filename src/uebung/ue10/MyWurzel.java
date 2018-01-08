@@ -1,7 +1,15 @@
 package uebung.ue10;
 
-public class MyWurzel {
+import org.junit.Test;
+import org.junit.Assert;
+import org.junit.Before;
 
+public class MyWurzel {
+	
+	
+
+	
+	@Before
 	public static String sqrt(int n) {
 		int sqr = 0;
 		int result = 0;
@@ -15,4 +23,6 @@ public class MyWurzel {
 					+ "Wurzel in den natürlichen Zahlen ist " + result + ". Die Wurzel ist " + sqr;
 		}
 	}
+	
+	
 }

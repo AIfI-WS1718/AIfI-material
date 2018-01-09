@@ -2,7 +2,13 @@ package aufgabenblaetter.blatt4;
 
 import java.util.ArrayList;
 import java.util.Iterator;
-
+/*
+ * Feedback gl 9.1.
+ * Insgesamt in Ordnung. Ein paar inhaltliche Fehler, aber gut lesbarer Code 
+ * (ausser dieser main Methode hier). Dazu habe ich noch ein paar Verbesserungsvorschläge /
+ * Hinweise geschrieben.
+ * Aufgabe 1.4 und 1.5 fehlen.
+ */
 public class Galaxy {
 
 	public static void main(String[] args) {
@@ -17,6 +23,7 @@ public class Galaxy {
 
 		System.out.println(ele2.toString());
 
+//		gl 9.1. F\u00FCr die Umlaute kann man auch Unicode-Zeichen verwenden. Das scheint verbreiteter zu sein.
 		System.out.println("Gr" + (char) 246 + (char) 223 + ": " + ele2.getGroesse());
 		System.out.println("x-Postion: " + ele2.getX());
 		System.out.println("y-Position: " + ele2.getY());

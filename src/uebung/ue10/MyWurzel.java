@@ -1,6 +1,15 @@
 package uebung.ue10;
 
+import org.junit.Test;
+
+import org.junit.Assert;
+
 public class MyWurzel {
+
+	@Test
+	public void main() {
+		Assert.assertEquals("Die Wurzel aus 24 ist 5", sqrt(24));
+	}
 
 	public static String sqrt(int n) {
 		int sqr = 0;
@@ -8,11 +17,12 @@ public class MyWurzel {
 		for (; result < n; sqr++) {
 			result = sqr * sqr;
 		}
+		sqr--;
 		if (result == n) {
 			return "Die Wurzel aus " + n + " ist " + sqr;
 		} else {
-			return "Keine Wurzel für " + n + " gefunden. Die nächst größere Zahl mit einer "
-					+ "Wurzel in den natürlichen Zahlen ist " + result + ". Die Wurzel ist " + sqr;
+			return "Keine Wurzel fï¿½r " + n + " gefunden. Die nï¿½chst grï¿½ï¿½ere Zahl mit einer "
+					+ "Wurzel in den natï¿½rlichen Zahlen ist " + result + ". Die Wurzel ist " + sqr;
 		}
 	}
 }

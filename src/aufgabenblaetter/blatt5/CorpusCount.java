@@ -35,8 +35,10 @@ public class CorpusCount {
 //			for(String word: words) {
 //				countWord(word);
 //			}
-//		}
-//		
+//		} 
+/////////////////////////////////////////////////////
+		//EINLESEN WOLLTE NICHT FUNKTIONIEREN
+/////////////////////////////////////////////////////
 		String line = "lorem ipsum dolor sit sit sit amet amet.";
 		String[] words = line.split(" ");
 		for(String word: words) {

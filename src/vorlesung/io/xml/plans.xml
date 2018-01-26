@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE plans SYSTEM "plans.dtd" >
+ 
+<plans>
+		<person id="äß" >
+			<plan>
+				<act type="h" x100="680200" y100="236800" link="3697"
+					end_time="07:17:36" />
+				<leg mode="train" dep_time="07:17:36">
+					<route>1315 1298 1316 1317</route>
+				</leg>
+				<act type="w" x100="684500" y100="230700" link="3783"
+					dur="08:00" />
+				<leg mode="car" dep_time="15:17:36">
+					<route>1318 1317 1316 1298</route>
+				</leg>
+				<act type="h" x100="680200" y100="236800" link="3697" />
+			</plan>
+		</person>
+		<person id="437">
+			<plan>
+				<act type="h" x100="679100" y100="235600" link="3695"
+					end_time="06:04:39" />
+				<leg mode="car" dep_time="06:04:39">
+					<route>1340</route>
+				</leg>
+				<act type="e" x100="678200" y100="236400" link="3836"
+					dur="06:00" />
+				<leg mode="car" dep_time="12:04:39">
+					<route>1335 1340 1297</route>
+				</leg>
+				<act type="h" x100="679100" y100="235600" link="3695" />
+			</plan>
+		</person>
+</plans>

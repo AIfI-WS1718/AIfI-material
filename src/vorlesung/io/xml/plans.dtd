@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<!ELEMENT plans ( person* ) >
+
+<!ELEMENT person ( plan* ) >
+<!ATTLIST person
+          id CDATA #REQUIRED
+          gender ( male | female | unknown ) "unknown"
+>            
+
+<!ELEMENT plan (act,(leg,act)*)>
+
+
+<!ELEMENT act EMPTY>
+<!ATTLIST act
+          type CDATA ""
+          x100 CDATA ""
+          y100 CDATA ""
+          link CDATA ""
+          dur CDATA ""
+          end_time CDATA ""
+>
+
+
+<!ELEMENT leg (route)>
+<!ATTLIST leg
+          mode CDATA ""
+          dep_time CDATA ""
+>          
+
+
+<!ELEMENT route (#PCDATA)>
+
+

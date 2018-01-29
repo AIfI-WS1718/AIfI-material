@@ -1,6 +1,11 @@
 package uebung8;
 
 public class Person {
+	boolean hungry;
+	
+	void setHungry(boolean hungry) {
+		this.hungry = hungry;
+	}
 	String name;
 	int age;
 Person (String name, int age){

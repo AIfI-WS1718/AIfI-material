@@ -3,21 +3,15 @@ package aufgabenblaetter.blatt5.aufg1;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.LinkedHashMap;
-import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
-import java.util.TreeMap;
-import java.util.stream.Collectors;
+import java.util.SortedSet;
+import java.util.TreeSet;
 
 class CorpusCount {
 
-	Map<String,Integer> words = new TreeMap<>();
-	
+	List<Entry> words = new ArrayList<>();
+	SortedSet<String> sortedWords = new TreeSet<>();
 	
 	public static void main(String[] args) throws IOException {
 		new CorpusCount().run();
@@ -25,22 +19,23 @@ class CorpusCount {
 
 	private void run() throws IOException {
 		readFile("./src/aufgabenblaetter/blatt5/aufg1/files/text.txt");
-		//sort();
+		sort();
 		write();
 	}
 
 	private void write() {
-		for (Map.Entry<String, Integer> w : words.entrySet()) {
-			System.out.println(w.getKey() + w.getValue());
+		for (String wd : sortedWords) {
+			System.out.println(wd);
 		}
 	} 
 
-	/*private void sort() {
-					
-		
-	}*/
+	private void sort() {
+		for (Entry word : words) {
+			sortedWords.add(word.toString());
+		}
+	}
 	
-		private void readFile(String filename) throws IOException {
+	private void readFile(String filename) throws IOException {
 		FileReader fr = new FileReader(filename);
 		BufferedReader br = new BufferedReader(fr);
 		String line;
@@ -54,15 +49,15 @@ class CorpusCount {
 	}
 
 	private void countWord(String word) {
-		// Map mit <Wort,Anzahl> füllen
-		
-		if (words.containsKey(word)) {
-			int count = words.get(word);
-			words.put(word, count+1);
-			
+		Entry tmpWord = new Entry (word);
+		if (words.contains(tmpWord)) {
+			int tmpId = words.indexOf(tmpWord);
+			words.get(tmpId).setCount();
 		} else {
-			words.put(word, 1);
+			Entry newWord = new Entry (word, 0);
+			words.add(newWord);
 		}
+		
 	}
 
 	
@@ -74,6 +69,24 @@ class CorpusCount {
 	class Entry {
 		String word;
 		int count;
+		
+		Entry (String word) {
+			this.word = word;
+		}
+		
+		Entry (String word, int count) {
+			this.word = word;
+			this.count = count;
+		}
+		
+		public void setCount() {
+			count++;
+		}
+		
+		@Override
+		public String toString() {
+			return count + "  " + word;
+		}
 	}
 
 }
